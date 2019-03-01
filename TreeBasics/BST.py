@@ -41,4 +41,34 @@ class BST:
             return    
 
 
+	#getting height of tree
+    def TreeHeight(self):
+        if self.root==None:
+            return 0
+        else:
+            return self.SubTreeHeight(self.root,0)
+    def SubTreeHeight(self,node, curHeight):
+        if node==None:
+            return curHeight
+        leftHeight = self.SubTreeHeight(node.LChild,curHeight+1)
+        rightHeight = self.SubTreeHeight(node.RChild,curHeight+1)
+        return max(leftHeight,rightHeight)
 
+    #search in the tree
+    def searchValue(self,lookup):
+        if self.root==None:
+            return None
+        else:
+            return self.SubTreeSearch(self.root,lookup)
+    
+    def SubTreeSearch(self,node,lookup):
+        if node==None:
+            return False
+        if node.val == lookup:
+            return True
+        elif node.val<lookup:
+            return self.SubTreeSearch(node.RChild,lookup)
+        else:
+            return self.SubTreeSearch(node.LChild,lookup)
+
+        return False
