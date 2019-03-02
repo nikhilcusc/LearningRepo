@@ -23,5 +23,4 @@ for i in r1.Children:
 
 print("BFS list is : ",NormalTree.BFS(T1))
 
-
-#print("DFS list is : ",NormalTree.DFS(T1))
+print("DFS list is : ",NormalTree.DFS(T1))

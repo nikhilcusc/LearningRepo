@@ -23,9 +23,9 @@ class Tree:
 def BFS(node):
     BFSlist = []
     queue1 = [node]
-    print("At node",node.val, "with children ",node.Children)
+    #print("At node",node.val, "with children ",node.Children)
     while queue1:
-        print("in while with queue", queue1)
+        #print("in while with queue", queue1)
         curNode = queue1[0]
         BFSlist.append(curNode.val)
         queue1=queue1[1:]
@@ -35,3 +35,15 @@ def BFS(node):
 
 
 
+def DFS(node):
+    DFSlist = []
+    stack1 = [node]
+    #print("At node",node.val, "with children ",node.Children)
+    while stack1:
+        #print("in while with queue", queue1)
+        curNode = stack1[0]
+        DFSlist.append(curNode.val)
+        stack1=stack1[1:]
+        for child in curNode.Children:
+            stack1.insert(0, child)
+    return DFSlist
