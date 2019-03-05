@@ -24,6 +24,7 @@ def fib_withmemoi(n):
 value =12
 #valueend = 100  my computer struggles to compute even 43
 valueend = 50
+
 for i in range(valueend):
     startTime = time.time()
     fibval = fib_withoutmemoi(i)
