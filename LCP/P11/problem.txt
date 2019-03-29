@@ -1,0 +1,1 @@
+Given an array, with values as y coordinates and index as x coordinate, find the max area that can be formed with in the array.
